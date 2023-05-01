@@ -13,34 +13,34 @@ def RightMPLA(x1_int , y1_int , x2_int , y2_int):
     if dy>=0 :
         if dx>=dy:
             d = dy*2-dx
-            incrE = dy*2
-            incrNE = (dy-dx)*2
+            dE = dy*2
+            dNE = (dy-dx)*2
             x=x1_int
             y=y1_int
             img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
             while x < x2_int:
                 if d<=0:
-                    d=d+incrE
+                    d=d+dE
                     x=x+1
                 else:
-                    d = d+incrNE
+                    d = d+dNE
                     x=x+1
                     y=y+1
                 img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
 
         else:
             d = dx*2-dy
-            incrN = dx*2
-            incrNE = (dx-dy)*2
+            dN = dx*2
+            dNE = (dx-dy)*2
             x=x1_int
             y=y1_int
             img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
             while y<y2_int:
                 if d<=0:
-                    d=d+incrN
+                    d=d+dN
                     y=y+1
                 else:
-                    d=d+incrNE
+                    d=d+dNE
                     x=x+1
                     y=y+1
                 img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
@@ -49,34 +49,34 @@ def RightMPLA(x1_int , y1_int , x2_int , y2_int):
         dy = -1*dy
         if dx>=dy:
             d = dy*2-dx;
-            incrE = dy*2;
-            incrSE = (dy-dx)*2
+            dE = dy*2;
+            dSE = (dy-dx)*2
             x=x1_int
             y=y1_int
             img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
             while x<x2_int:
                 if d<=0:
-                    d=d+incrE
+                    d=d+dE
                     x=x+1
                 else:
-                    d=d+incrSE
+                    d=d+dSE
                     x=x+1
                     y=y-1
                 img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
 
         else:
             d = dx*2-dy;
-            incrS = dx*2;
-            incrSE = (dx-dy)*2
+            dS = dx*2;
+            dSE = (dx-dy)*2
             x=x1_int
             y=y1_int
             img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
             while y>y2_int:
                 if d<=0:
-                    d=d+incrS
+                    d=d+dS
                     y=y-1
                 else:
-                    d=d+incrSE
+                    d=d+dSE
                     x=x+1
                     y=y-1
                 img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
@@ -94,34 +94,34 @@ def LeftMPLA(x1_int , y1_int , x2_int , y2_int):
         dy=-1*dy
         if dx>=dy:
             d = dy*2-dx
-            incrW = dy*2
-            incrSW = (dy-dx)*2
+            dW = dy*2
+            dSW = (dy-dx)*2
             x=x1_int
             y=y1_int
             img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
             while x > x2_int:
                 if d<0:
-                    d=d+incrW
+                    d=d+dW
                     x=x-1
                 else:
-                    d = d+incrSW
+                    d = d+dSW
                     x=x-1
                     y=y-1
                 img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
 
         else:
             d = dx*2-dy
-            incrS = dx*2
-            incrSW = (dx-dy)*2
+            dS = dx*2
+            dSW = (dx-dy)*2
             x=x1_int
             y=y1_int
             img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
             while y>y2_int:
                 if d<0:
-                    d=d+incrS
+                    d=d+dS
                     y=y-1
                 else:
-                    d=d+incrSW
+                    d=d+dSW
                     x=x-1
                     y=y-1
                 img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
@@ -130,34 +130,34 @@ def LeftMPLA(x1_int , y1_int , x2_int , y2_int):
 
         if dx>=dy:
             d = dy*2-dx;
-            incrW = dy*2;
-            incrNW = (dy-dx)*2
+            dW = dy*2;
+            dNW = (dy-dx)*2
             x=x1_int
             y=y1_int
             img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
             while x>x2_int:
                 if d<0:
-                    d=d+incrW
+                    d=d+dW
                     x=x-1
                 else:
-                    d=d+incrNW
+                    d=d+dNW
                     x=x-1
                     y=y+1
                 img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
 
         else:
             d = dx*2-dy;
-            incrN = dx*2;
-            incrNW = (dx-dy)*2
+            dN = dx*2;
+            dNW = (dx-dy)*2
             x=x1_int
             y=y1_int
             img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
             while y<y2_int:
                 if d<0:
-                    d=d+incrN
+                    d=d+dN
                     y=y+1
                 else:
-                    d=d+incrNW
+                    d=d+dNW
                     x=x-1
                     y=y+1
                 img = cv2.line(img,(x,y),(x,y),(255,0,0),5)
@@ -181,11 +181,7 @@ def click() :
 
 
 
-    '''print(x1_int,y1_int,x2_int,y2_int)
-    img = np.zeros((500,500,3),np.uint8)
-    img = cv2.line(img,(x1_int,y1_int),(x2_int,y2_int),(255,0,0),5)
-    img = cv2.line(img,(10,10),(450,450),(255,0,0),5)
-    cv2.imshow("img",img)'''
+
 
 
 
