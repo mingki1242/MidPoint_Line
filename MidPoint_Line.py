@@ -1,6 +1,10 @@
 import tkinter as tk
 import numpy as np
 import cv2
+
+def translation(dx,dy):
+    arr=[[1,0,dx],[0,1,dy],[0,0,1]]
+
 def RightMPLA(x1_int , y1_int , x2_int , y2_int):
     img = np.zeros((500,500,3),np.uint8)
     dx = x2_int-x1_int
@@ -163,11 +167,17 @@ def click() :
     y1_int = int(y1.get())
     x2_int = int(x2.get())
     y2_int = int(y2.get())
+    dx_int = int(Translation_dx.get())
+    dy_int = int(Translation_dy.get())
 
-    if x2_int-x1_int>=0:
+    if x2_int-x1_int>=0 and dx_int==0 and dy_int==0:
         RightMPLA(x1_int,y1_int,x2_int,y2_int)
-    else:
+    elif x2_int-x1_int>=0 and (dx_int!=0 or dy_int!=0):
+        RightMPLA(x1_int+dx_int,y1_int+dy_int,x2_int+dx_int,y2_int+dy_int)
+    elif x2_int-x1_int<0 and dx_int==0 and dy_int==0:
         LeftMPLA(x1_int,y1_int,x2_int,y2_int)
+    elif x2_int-x1_int<0 and (dx_int!=0 or dy_int!=0):
+        LeftMPLA(x1_int+dx_int,y1_int+dy_int,x2_int+dx_int,y2_int+dy_int)
 
 
 
@@ -189,6 +199,8 @@ x1 = tk.StringVar()
 x2 = tk.StringVar()
 y1 = tk.StringVar()
 y2 = tk.StringVar()
+Translation_dx = tk.StringVar()
+Translation_dy = tk.StringVar()
 
 window.title("21812082 컴퓨터공학과 박민기 MidPoint_Algorithm 과제")
 window.geometry("640x400+100+100")
@@ -206,7 +218,13 @@ input_x2 = tk.Entry(window, width = 10,textvariable=x2).grid(column=3 , row = 2)
 lab_tmp4 = tk.Label(window , text= "Y좌표",).grid(column=4,row=2)
 input_y2 = tk.Entry(window,width = 10,textvariable=y2).grid(column=5,row = 2)
 
-execute_button = tk.Button(window , text="선 그리기" , command=click).grid(column=400,row=5)
+lab2 = tk.Label(window , text="Translation 변환을 위한 dx , dy를 입력하시오").grid(column=1,row = 3)
+lab_tmp3 = tk.Label(window , text= "X좌표 변화량").grid(column=2,row=3)
+input_x2 = tk.Entry(window, width = 10,textvariable=Translation_dx).grid(column=3 , row = 3)
+lab_tmp4 = tk.Label(window , text= "Y좌표 변화량",).grid(column=4,row=3)
+input_y2 = tk.Entry(window,width = 10,textvariable=Translation_dy).grid(column=5,row = 3)
+
+execute_button = tk.Button(window , text="선 그리기" , command=click).grid(column=400,row=3)
 
 
 window.mainloop()
