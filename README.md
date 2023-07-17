@@ -18,10 +18,8 @@
 </p>
 
 ## 🛶별첨
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/> : <a href = "https://github.com/mingki1242/MidPoint_Line.git"> 깃허브 링크 <br>
-
-
-<img src = "https://img.shields.io/badge/Youtube-ff0000?style=flat-square&logo=youtube&link=https://www.youtube.com/c/kyleschool"/> : <a href = "https://youtu.be/xIz7WrN8Coc"> 유튜브 데모영상 링크 <br>
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/> : <a href = "https://github.com/mingki1242/MidPoint_Line.git"> 깃허브 링크 </a><br>
+<img src = "https://img.shields.io/badge/Youtube-ff0000?style=flat-square&logo=youtube&link=https://www.youtube.com/c/kyleschool"/> : <a href = "https://youtu.be/xIz7WrN8Coc"> 유튜브 데모영상 링크 </a><br>
 
 ## 🎈실행 방법
 <p>
