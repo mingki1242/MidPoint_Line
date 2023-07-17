@@ -14,7 +14,6 @@
 ## 👨‍💻개발 환경
 <p>
   언어 : Python <br>
-  프레임워크 : x <br>
   IDE : IntelliJ IDEA 2023 Ulitimate <br>
 </p>
 
