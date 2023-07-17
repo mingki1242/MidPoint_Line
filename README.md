@@ -23,7 +23,7 @@
 <img src="https://img.shields.io/badge/Google Cloud-4285F4?style=flat-square&logo=Google Cloud&logoColor=white"/> : <br> 
 <img src = "https://img.shields.io/badge/Youtube-ff0000?style=flat-square&logo=youtube&link=https://www.youtube.com/c/kyleschool"/> : <a href = "https://youtu.be/xIz7WrN8Coc"> 유튜브 데모영상 링크 <br>
 
-## 실행 방법
+## 🎈실행 방법
 <p>
   파이썬 파일 MidPoint_Line.py을 실행하여 X , Y 좌표값을 입력하면 선을 그어줍니다<br>
   <img width="857" alt="그래픽스 과제1" src="https://github.com/mingki1242/MidPoint_Line/assets/86062121/5cf7329f-b998-4d0d-a0e7-5830f83c4cff">
